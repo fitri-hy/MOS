@@ -156,7 +156,7 @@ When an agent first connects, it sends a message of type `register`:
    }
    ```
 
-#### Perintah dari Dashboard
+#### Commands From Dashboard
 
    The dashboard sends commands via the server to the agent:
 
