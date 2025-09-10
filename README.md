@@ -5,8 +5,8 @@
 **Multi-Agent Orchestrator System (MOS)** is a real-time, multi-agent monitoring and management system that supports multiple platforms. MOS enables device monitoring (Desktop, Mobile, IoT) from a central server via a web dashboard.
 Sistem ini terdiri dari:  
 
-- **Agent** → Aplikasi yang dijalankan di perangkat target (Windows, Linux, macOS, Android, iOS, IoT).  
-- **Server** → Mengelola koneksi agent, menyimpan histori, dan menyediakan dashboard untuk monitoring dan manajemen.  
+- **Agent** → An application running on a target device (Windows, Linux, macOS, Android, iOS, IoT).
+- **Server** → Manages agent connections, stores history, and provides a dashboard for monitoring and management.
 
 ## Key Features
 
