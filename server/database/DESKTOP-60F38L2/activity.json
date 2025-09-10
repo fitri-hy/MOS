@@ -1,0 +1,29 @@
+[
+  {
+    "timestamp": "2025-09-10T09:23:26.998Z",
+    "openApplications": [
+      {
+        "process": "Firefox",
+        "title": "fitri-hy (Fitri HY) — Mozilla Firefox"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-09-10T09:23:12.056Z",
+    "openApplications": [
+      {
+        "process": "Windows Explorer",
+        "title": "DESKTOP-3F92KX1"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-09-10T09:22:10.497Z",
+    "openApplications": [
+      {
+        "process": "Windows PowerShell",
+        "title": "Windows PowerShell"
+      }
+    ]
+  }
+]

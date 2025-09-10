@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dashboard</title>
+	<%- include("components/head") %>
+</head>
+<body class="text-neutral-700 flex flex-col justify-center items-center min-h-screen w-full bg-gradient-to-br from-sky-50/40 to-white">
+	<img class="fixed top-0 right-0 -z-10" src="/assets/images/shape.png" alt="shape.png" />
+	
+	<main class="min-h-screen w-full">
+		<%- include("components/header") %>
+		
+		<section class="p-4 md:p-9">
+			<div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 py-9">
+				<div>
+					<% 
+					  const hour = new Date().getHours();
+					  let greeting = "Welcome";
+					  if (hour >= 5 && hour < 12) greeting = "Good Morning";
+					  else if (hour >= 12 && hour < 16) greeting = "Good Afternoon";
+					  else if (hour >= 16 && hour < 19) greeting = "Good Evening";
+					  else greeting = "Good Night";
+					  
+					  const quotes = [
+						"Success is not final, failure is not fatal: it is the courage to continue that counts.",
+						"The future depends on what you do today.",
+						"Don’t watch the clock; do what it does. Keep going.",
+						"Your limitation—it's only your imagination.",
+						"Great things never come from comfort zones."
+					  ];
+					  const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+					%>
+					<div class="flex flex-col gap-1 mt-4">
+						<h1 class="text-4xl font-bold text-black">
+							<%= greeting %>!
+							<span class="text-blue-500">
+							<%= username.charAt(0).toUpperCase() + username.slice(1) %>
+							</span>
+						</h1>
+						<span><%= randomQuote %></span>
+					</div>
+
+					<div class="grid grid-cols-1 md:flex md:flex-row mt-6 gap-2">
+						<div class="md:w-36 bg-indigo-500 text-white flex flex-col justify-center items-center p-4 rounded">
+							<p id="totalAgents" class="text-3xl font-extrabold"><%= totalAgents %></p>
+							<h3 class="text-center text-lg font-semibold">Agents</h3>
+						</div>
+						<div class="md:w-36 bg-emerald-500 text-white flex flex-col justify-center items-center p-4 rounded">
+							<p id="totalOnline" class="text-3xl font-extrabold"><%= totalOnline %></p>
+							<h3 class="text-center text-lg font-semibold">Online</h3>
+						</div>
+						<div class="md:w-36 bg-rose-500 text-white flex flex-col justify-center items-center p-4 rounded">
+							<p id="totalOffline" class="text-3xl font-extrabold"><%= totalOffline %></p>
+							<h3 class="text-center text-lg font-semibold">Offline</h3>
+						</div>
+					</div>
+				</div>
+				<div>
+					<%- include("components/command") %>
+				</div>
+			</div>
+			<%- include("components/agent-cards") %>
+		</section>
+	</main>
+
+<script src="/assets/js/dashboard.js"></script>
+
+</body>
+</html>

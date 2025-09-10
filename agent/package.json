@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "description": "Multi-Agent Orchestrator System (MOS) is a real-time, multi-agent monitoring and management system that supports multiple platforms.",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "MOS",
+    "Multi-Agent",
+    "Orchestrator",
+    "Monitoring",
+    "Management",
+    "Real-time",
+    "Dashboard",
+    "Agent",
+    "Server",
+    "IoT",
+    "Desktop",
+    "Mobile",
+    "Multi-platform"
+  ],
+  "author": "Fitri HY",
+  "license": "MIT",
+  "dependencies": {
+    "active-win": "^8.2.1",
+    "ws": "^8.18.3"
+  }
+}

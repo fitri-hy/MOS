@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= agentId %></title>
+    <%- include("components/head") %>
+</head>
+<body class="text-neutral-700 flex flex-col justify-center items-center min-h-screen w-full bg-gradient-to-br from-sky-50/40 to-white">
+	<img class="fixed top-0 right-0 -z-10" src="/assets/images/shape.png" alt="shape.png" />
+	
+	<main class="min-h-screen w-full">
+		<%- include("components/header") %>
+		
+		<section class="p-4 ">
+			<div class="flex items-center gap-2">
+				<a href="/dashboard" class="bg-rose-500 hover:bg-rose-600 hover:duration-300 text-white p-1 rounded">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 12H4m0 0l6-6m-6 6l6 6"/></svg>
+				</a>
+				<h1 class="text-2xl font-bold text-black">
+					<span class="text-blue-500">
+					<%= agentId %>
+					</span>
+				</h1>
+			</div>
+
+			<div class="mt-4">
+				<div class="overflow-x-auto bg-white border border-neutral-200 rounded">
+					<table class="min-w-full">
+						<thead class="bg-gray-50">
+							<tr>
+								<th class="px-4 py-2 text-left font-semibold">
+									Recent Activity
+								</th>
+								<th class="px-4 py-2 text-left font-semibold">
+									Apps Running
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+						  <% if (activities.length === 0) { %>
+							<tr>
+							  <td colspan="2" class="px-4 py-2 text-center">
+								There is no activity yet
+							  </td>
+							</tr>
+						  <% } else { %>
+							<% activities.forEach(act => { %>
+							  <tr class="hover:bg-gray-100">
+								<td class="px-4 py-2 flex justify-start">
+								  <%= new Date(act.timestamp).toLocaleString() %>
+								</td>
+								<td class="px-4 py-2 text-sm">
+								  <% act.openApplications.forEach(app => { %>
+									<div class="flex flex-col">
+									  <span class="font-semibold text-blue-500">
+										<%= app.process %>
+									  </span>
+									  <span class="overflow-hidden line-clamp-1">
+										<%= app.title %>
+									  </span>
+									</div>
+								  <% }) %>
+								</td>
+							  </tr>
+							<% }) %>
+						  <% } %>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		
+		</section>
+    </main>
+</body>
+</html>

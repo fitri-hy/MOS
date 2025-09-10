@@ -1,0 +1,30 @@
+{
+  "name": "mos",
+  "version": "1.0.0",
+  "description": "Multi-Agent Orchestrator System (MOS) is a real-time, multi-agent monitoring and management system that supports multiple platforms.",
+  "main": "app.js",
+  "scripts": {
+    "start": "concurrently \"node server/app.js\" \"node agent/app.js\"",
+    "dev": "concurrently \"npm --prefix server run dev\" \"node agent/app.js\""
+  },
+  "keywords": [
+    "MOS",
+    "Multi-Agent",
+    "Orchestrator",
+    "Monitoring",
+    "Management",
+    "Real-time",
+    "Dashboard",
+    "Agent",
+    "Server",
+    "IoT",
+    "Desktop",
+    "Mobile",
+    "Multi-platform"
+  ],
+  "author": "Fitri HY",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

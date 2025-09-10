@@ -1,0 +1,27 @@
+[
+  {
+    "id": "DESKTOP-60F38L2",
+    "status": "offline",
+    "platform": "win32"
+  },
+  {
+    "id": "ANDROID-7GJ4M9",
+    "status": "offline",
+    "platform": "android"
+  },
+  {
+    "id": "IOS-2QW8ZP",
+    "status": "offline",
+    "platform": "ios"
+  },
+  {
+    "id": "IOS-8MN3YZ",
+    "status": "offline",
+    "platform": "ios"
+  },
+  {
+    "id": "IOT-6PQ4LR",
+    "status": "offline",
+    "platform": "iot"
+  }
+]

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+    <title>Login</title>
+	
+	<link rel="icon" type="image/png" href="/assets/images/logo.png">
+	<meta name="author" content="Fhylabs">
+	<link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="text-neutral-700 flex flex-col justify-center items-center p-4 min-h-screen w-full bg-gradient-to-br from-sky-50/40 to-white">
+	<img class="fixed top-0 right-0 -z-10" src="/assets/images/shape.png" alt="shape.png" />
+	
+	<main class="flex flex-col gap-4 p-4 md:p-9 rounded-lg shadow-sm bg-white w-full max-w-sm">
+		<div class="flex flex-col gap-1 justify-center items-center mb-4">
+			<img class="h-20 w-20 mx-auto rounded object-cover" src="/assets/images/logo.png" alt="logo.png" />
+			<h1 class="text-center text-3xl font-extrabold tracking-tight">
+				LOGIN
+			</h1>
+			<p>
+				Please login to access your dashboard.
+			</p>
+		</div>
+		
+		<% if (error) { %>
+			<p class="text-center text-sm text-rose-500"><%= error %></p>
+		<% } %>
+		
+		<form method="POST" action="/" class="flex flex-col gap-4">
+			<div class="flex flex-col gap-1">
+				<label>Username</label>
+				<input type="text" name="username" required placeholder="Enter your username" class="px-4 py-2 rounded bg-neutral-50 border border-neutral-200 focus:outline-none">
+			</div>
+			<div class="flex flex-col gap-1">
+				<label>Password</label>
+				<input type="password" name="password" required placeholder="Enter your password" class="px-4 py-2 rounded bg-neutral-50 border border-neutral-200 focus:outline-none">
+			</div>
+			<div class="flex items-center justify-center mt-4">
+				<button type="submit" class="cursor-pointer flex items-center gap-1 bg-blue-500 text-white font-semibold px-4 py-2 rounded">
+					Sign In
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6m0 0H9m9 0v9"/></svg>
+				</button>
+			</div>
+		</form>
+	</main>
+</body>
+</html>
